@@ -1,0 +1,24 @@
+@model Entity.Concrete.Category
+
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<h2>Kategori Ekle</h2>
+<br/>
+<form class="form-group" method="post">
+    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" >
+    @Html.ValidationMessageFor(x=>x.CategoryName)
+    <br/>
+    <input type="text" placeholder="Kategori Açıklaması" name="CategoryDescription" class="form-control" />
+    @Html.ValidationMessageFor(x=>x.CategoryDescription)
+    <br/>
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="CategoryStatus" name="CategoryStatus" checked>
+        <label class="custom-control-label" for="CategoryStatus" >Kategori Durumu (Aktif/Pasif)</label>
+        @Html.ValidationMessageFor(x=>x.CategoryStatus)
+    </div>
+    <button class="btn btn-primary">Ekle</button>
+</form>
