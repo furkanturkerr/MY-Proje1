@@ -27,6 +27,20 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v2-4-x.md" />
+      <Content Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v3-x.md" />
+      <Content Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\feature-request-for-adminlte-v3-x.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include="wwwroot\AdminLTE-3.0.4\plugins\fullcalendar-bootstrap\main.d.ts" />
+      <TypeScriptCompile Include="wwwroot\AdminLTE-3.0.4\plugins\fullcalendar-daygrid\main.d.ts" />
+      <TypeScriptCompile Include="wwwroot\AdminLTE-3.0.4\plugins\fullcalendar-interaction\main.d.ts" />
+      <TypeScriptCompile Include="wwwroot\AdminLTE-3.0.4\plugins\fullcalendar-timegrid\main.d.ts" />
+      <TypeScriptCompile Include="wwwroot\AdminLTE-3.0.4\plugins\fullcalendar\main.d.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Folder Include="Pages\" />
     </ItemGroup>
 

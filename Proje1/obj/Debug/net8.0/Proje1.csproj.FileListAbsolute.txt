@@ -141,3 +141,4 @@ C:\Users\Furkan\MY\My - Proje1\Proje1\bin\Debug\net8.0\Entity.pdb
 C:\Users\Furkan\MY\My - Proje1\Proje1\obj\Debug\net8.0\Proje1.csproj.AssemblyReference.cache
 C:\Users\Furkan\MY\My - Proje1\Proje1\obj\Debug\net8.0\Proje1.csproj.Up2Date
 C:\Users\Furkan\MY\My - Proje1\Proje1\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Furkan\MY\My - Proje1\Proje1\obj\Debug\net8.0\Proje1.sourcelink.json
