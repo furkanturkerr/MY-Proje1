@@ -15,12 +15,18 @@ public class Writer
     public string WriterSurname { get; set; }
     
     [StringLength(100)]
-    public string WriterImage { get; set; } 
+    public string WriterImage { get; set; }
     
     [StringLength(50)]
+    public string WriterTitle { get; set; }
+    
+    [StringLength(100)]
+    public string WriterAbaut { get; set; }
+    
+    [StringLength(200)]
     public string WriterEmail { get; set; }
     
-    [StringLength(20)]
+    [StringLength(200)]
     public string WriterPassword { get; set; }
 
     public ICollection<Heading> Headings { get; set; } 

@@ -3,7 +3,7 @@ using Entity.Concrete;
 
 namespace Business.Abstract;
 
-public interface ICategoryService : IGenericDal<Category>
+public interface ICategoryService : IGenericService<Category>
 {
     
 }

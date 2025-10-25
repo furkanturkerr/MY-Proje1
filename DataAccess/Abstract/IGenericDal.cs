@@ -9,4 +9,5 @@ public interface IGenericDal<T>
     void Update(T t);
     void Delete(T t);
     List<T> GetAll(Expression<Func<T, bool>> filter);
+    T GetById(int id);
 }

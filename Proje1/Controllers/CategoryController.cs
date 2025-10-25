@@ -32,7 +32,7 @@ public class CategoryController : Controller
         ValidationResult validationResult = categoryValidatior.Validate(category);
         if (validationResult.IsValid)
         {
-            _categoryService.Add(category);
+            _categoryService.Insert(category);
             return RedirectToAction("Index");
         }
         else
@@ -43,5 +43,26 @@ public class CategoryController : Controller
             }
         }
         return View();
+    }
+
+    public IActionResult DeleteCategory(int id)
+    {
+        var valurs = _categoryService.GetById(id);
+        _categoryService.Delete(valurs);
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public IActionResult UpdateCategory(int id)
+    {
+        var valurs = _categoryService.GetById(id);
+        return View(valurs);
+    }
+    
+    [HttpPost]
+    public IActionResult UpdateCategory(Category category)
+    {
+            _categoryService.Update(category);
+            return RedirectToAction("Index");
     }
 }

@@ -73,7 +73,7 @@ namespace DataAcces.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<bool>("CategoryStatus")
+                    b.Property<bool?>("CategoryStatus")
                         .HasColumnType("bit");
 
                     b.HasKey("CategoryId");
@@ -183,10 +183,15 @@ namespace DataAcces.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WriterId"));
 
+                    b.Property<string>("WriterAbaut")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<string>("WriterEmail")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("WriterImage")
                         .IsRequired()
@@ -200,10 +205,15 @@ namespace DataAcces.Migrations
 
                     b.Property<string>("WriterPassword")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("WriterSurname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("WriterTitle")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");

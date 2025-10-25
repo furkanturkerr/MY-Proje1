@@ -11,6 +11,8 @@ builder.Services.AddDbContext<ProjeContext>();
 
 builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<IWriterDal, EfWriterDal>();
+builder.Services.AddScoped<IWriterService, WriterManager>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -36,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Category}/{action=Index}/{id?}");
+    pattern: "{controller=Writer}/{action=Index}/{id?}");
 
 app.Run();

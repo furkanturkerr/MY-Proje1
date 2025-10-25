@@ -9,11 +9,13 @@
 <h2>Kategori Ekle</h2>
 <br/>
 <form class="form-group" method="post">
-    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" >
-    @Html.ValidationMessageFor(x=>x.CategoryName)
+    @Html.HiddenFor(x => x.CategoryId)
+    
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
     <br/>
-    <input type="text" placeholder="Kategori Açıklaması" name="CategoryDescription" class="form-control" />
-    @Html.ValidationMessageFor(x=>x.CategoryDescription)
+    @Html.Label("Kateori Açıklaması")
+    @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" })
     <br/>
-    <button class="btn btn-primary">Ekle</button>
+    <button class="btn btn-outline-success">Güncelle</button>
 </form>

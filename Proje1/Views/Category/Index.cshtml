@@ -13,6 +13,8 @@
         <th>Ad</th>
         <th>Açıklama</th>
         <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -21,6 +23,8 @@
             <td>@item.CategoryName</td>
             <td>@item.CategoryDescription</td>
             <td>@item.CategoryStatus</td>
+            <td><a href="~/Category/DeleteCategory/@item.CategoryId"  class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-primary">Güncelle</a></td>
         </tr> 
     }
 </table>
