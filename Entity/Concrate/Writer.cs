@@ -29,6 +29,8 @@ public class Writer
     [StringLength(200)]
     public string WriterPassword { get; set; }
 
+    public bool WriterStatuss { get; set; }
+
     public ICollection<Heading> Headings { get; set; } 
     
     public ICollection<Content> Contents { get; set; }

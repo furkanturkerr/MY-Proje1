@@ -52,4 +52,10 @@ public class HeadingController : Controller
         _headinService.Insert(heading);
         return RedirectToAction("Index");
     }
+
+    public ActionResult ContentByHeading()
+    {
+        
+        return View();
+    }
 }

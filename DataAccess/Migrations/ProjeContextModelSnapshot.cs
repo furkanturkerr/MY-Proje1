@@ -208,6 +208,9 @@ namespace DataAcces.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<bool>("WriterStatuss")
+                        .HasColumnType("bit");
+
                     b.Property<string>("WriterSurname")
                         .IsRequired()
                         .HasMaxLength(50)

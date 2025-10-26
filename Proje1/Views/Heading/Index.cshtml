@@ -23,7 +23,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Proje İşlemleri</h3>
+                        <h3 class="card-title">Başlık İşlemleri</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fas fa-minus"></i>
@@ -63,7 +63,6 @@
                                     color = "badge badge-warning";
                                 }
                                 <tr>
-                                        color = "
                                     <td>
                                         @item.HeadingId
                                     </td>
@@ -73,7 +72,7 @@
                                         </a>
                                         <br/>
                                         <small>
-                                            @item.HeadingDate
+                                            @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
                                         </small>
                                     </td>
                                     <td>
@@ -87,7 +86,7 @@
                                         <span class="@color">@item.Category.CategoryName</span>
                                     </td>
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-primary btn-sm" href="#">
+                                        <a class="btn btn-primary btn-sm" href="~/Heading/ContentByHeading/">
                                             <i class="fas fa-folder">
                                             </i>
                                             Yazılar
@@ -114,25 +113,4 @@
             </section>
 </body>
 </html>
-
-
-
-@*<h2>Index</h2>
-    <br />
-    <table class="table table-bordered">
-        <tr>
-            <th>ID</th>
-            <th>Başlık</th>
-            <th>Kategori</th>
-        </tr>
-        @foreach(var item in Model)
-        {
-            <tr>
-                <td>@item.HeadingID</td>
-                <td>@item.HeadingName</td>
-                <td>@item.Category.CategoryName</td>
-            </tr>
-        }
-    </table>
-    <br />
-    <a href="/Heading/AddHeading" class="btn btn-info">Yeni başlık Girişi</a>*@
+<a href="~/Heading/AddHeading/" class="btn btn-outline-success">Yeni Başlık Girişi</a>
