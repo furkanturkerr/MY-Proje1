@@ -77,6 +77,7 @@ public class HeadingController : Controller
     public IActionResult DeleteHeading(int id)
     {
         var value = _headinService.GetById(id);
+        value.HeadingStatus = value.HeadingStatus == true ? false : true;
         _headinService.Delete(value);
         return RedirectToAction("Index");
     }
