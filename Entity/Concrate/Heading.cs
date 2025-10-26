@@ -10,6 +10,8 @@ public class Heading
     [StringLength(500)]
     public string HeadingName { get; set; }
     
+    public bool HeadingStatus { get; set; }
+    
     public DateTime HeadingDate { get; set; }
     
     public int? CategoryId { get; set; }

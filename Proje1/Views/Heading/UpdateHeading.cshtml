@@ -1,0 +1,26 @@
+@model Entity.Concrete.Heading
+
+@{
+    Layout = "_adminlayouts";
+}
+
+<h2>Başlık Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("UpdateHeading", "Heading", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.HeadingId)
+        @Html.Label("Baslık Id")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+        <br/>
+        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br/>
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.HeadingDate, new { @class = "form-control" })
+        <br/>
+        @Html.Label("Yazar")
+        @Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })
+        <br/>
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+}

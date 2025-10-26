@@ -52,10 +52,32 @@ public class HeadingController : Controller
         _headinService.Insert(heading);
         return RedirectToAction("Index");
     }
-
-    public ActionResult ContentByHeading()
+    
+    [HttpGet]
+    public IActionResult UpdateHeading(int id)
     {
-        
-        return View();
+        List<SelectListItem> valueCategory = (from x in _categoryService.GetAll()
+            select new SelectListItem
+            {
+                Text = x.CategoryName,
+                Value = x.CategoryId.ToString()
+            }).ToList();
+        ViewBag.vlc = valueCategory;
+        var valurs = _headinService.GetById(id);
+        return View(valurs);
+    }
+
+    [HttpPost]
+    public IActionResult UpdateHeading(Heading heading)
+    {
+        _headinService.Update(heading);
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult DeleteHeading(int id)
+    {
+        var value = _headinService.GetById(id);
+        _headinService.Delete(value);
+        return RedirectToAction("Index");
     }
 }

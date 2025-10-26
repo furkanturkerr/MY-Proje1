@@ -91,15 +91,15 @@
                                             </i>
                                             Yazılar
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="#">
+                                        <a class="btn btn-info btn-sm" href="~/Heading/UpdateHeading/@item.HeadingId">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Düzenle
                                         </a>
-                                        <a class="btn btn-danger btn-sm" href="#">
+                                        <a class="@(item.HeadingStatus == true ? "btn-danger" : "btn-success")" href="~/Heading/DeleteHeading/@item.HeadingId">
                                             <i class="fas fa-trash">
                                             </i>
-                                            Sil
+                                            @(item.HeadingStatus == true ? "Pasif Et" : "Aktif Et") 
                                         </a>
                                     </td>
                                 </tr>

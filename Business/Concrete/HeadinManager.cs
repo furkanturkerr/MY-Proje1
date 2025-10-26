@@ -23,7 +23,8 @@ public class HeadinManager : IHeadinService
 
     public void Delete(Heading t)
     {
-        _headingDal.Delete(t);
+        t.HeadingStatus = t.HeadingStatus == true ? false : true;
+        _headingDal.Update(t);
     }
 
     public Heading GetById(int id)

@@ -12,6 +12,8 @@ public class Content
     
     public DateTime ContentTime { get; set; }
     
+    public bool ContentStatus { get; set; }
+    
     public int HeadingId { get; set; }
     public virtual Heading Heading { get; set; }
     

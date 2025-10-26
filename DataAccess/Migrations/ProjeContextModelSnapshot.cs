@@ -121,6 +121,9 @@ namespace DataAcces.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContentId"));
 
+                    b.Property<bool>("ContentStatus")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("ContentTime")
                         .HasColumnType("datetime2");
 
@@ -162,6 +165,9 @@ namespace DataAcces.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("HeadingStatus")
+                        .HasColumnType("bit");
 
                     b.Property<int>("WriterId")
                         .HasColumnType("int");
