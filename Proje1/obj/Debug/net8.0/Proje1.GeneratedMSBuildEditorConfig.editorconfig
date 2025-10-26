@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJhdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Furkan/MY/My - Proje1/Proje1/Views/Abaut/_AbautPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJhdXRcX0FiYXV0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Furkan/MY/My - Proje1/Proje1/Views/AdminCategory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYXRlZ29yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Furkan/MY/My - Proje1/Proje1/Views/Category/UpdateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Furkan/MY/My - Proje1/Proje1/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Furkan/MY/My - Proje1/Proje1/Views/Content/ContentByHeading.cshtml]

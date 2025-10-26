@@ -24,34 +24,4 @@
     }
 </table>
 
-
-<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
-    Yeni Hakkımızda Yazı Girişi
-</button>
-
-<div class="modal" id="Modal1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Hakkımızda Metin Girişi</h2>
-            </div>
-            <form method="post" action="~/Abaut/AddAbaut/">
-                <div class="modal-body">
-                    <label>Hakkımda Metin1</label>
-                    <input type="text" class="form-control" name="AbautDetails1"/>
-                    <br/>
-                    <label>Hakkımda Metin2</label>
-                    <input type="text" class="form-control" name="AbautDetails2"/>
-                    <br/>
-                    <label>Hakkımda Görsel1</label>
-                    <input type="text" class="form-control" name="AbautImage"/>
-                    <br/>
-                    <label>Hakkımda Görsel2</label>
-                    <input type="text" class="form-control" name="AbautImage2"/>
-                    <br/>
-                    <button class="btn btn-primary">Kaydet</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+@await Html.PartialAsync("_AbautPartial")

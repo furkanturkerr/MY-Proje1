@@ -30,4 +30,9 @@ public class AbautController : Controller
         _abautService.Insert(abaut);
         return RedirectToAction("Index");
     }
+
+    public PartialViewResult _AbautPartial()
+    {
+        return PartialView();
+    }
 }
