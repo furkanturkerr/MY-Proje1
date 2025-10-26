@@ -1,10 +1,29 @@
-@model dynamic
+@using Entity.Concrete
+@model List<Abaut>
 
 @{
     Layout = "_adminlayouts";
 }
 
-<h2>Index</h2>
+<h2>Hakkında Veri Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Hakkımda Başlığı</th>
+        <th>Aktif</th>
+        <th>Pasif</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AbautId</td>
+            <td>Başlık</td>
+            <td><a href="#" class="btn btn-success">Aktif</a></td>
+            <td><a href="#" class="btn btn-danger">Pasif</a></td>
+    </tr>
+    }
+</table>
+
 
 <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
     Yeni Hakkımızda Yazı Girişi
@@ -16,19 +35,19 @@
             <div class="modal-header">
                 <h2 class="modal-title">Hakkımızda Metin Girişi</h2>
             </div>
-            <form method="post" action="#">
+            <form method="post" action="~/Abaut/AddAbaut/">
                 <div class="modal-body">
                     <label>Hakkımda Metin1</label>
-                    <input type="text" class="form-control" name="#"/>
+                    <input type="text" class="form-control" name="AbautDetails1"/>
                     <br/>
                     <label>Hakkımda Metin2</label>
-                    <input type="text" class="form-control" name="#"/>
+                    <input type="text" class="form-control" name="AbautDetails2"/>
                     <br/>
                     <label>Hakkımda Görsel1</label>
-                    <input type="text" class="form-control" name="#"/>
+                    <input type="text" class="form-control" name="AbautImage"/>
                     <br/>
                     <label>Hakkımda Görsel2</label>
-                    <input type="text" class="form-control" name="#"/>
+                    <input type="text" class="form-control" name="AbautImage2"/>
                     <br/>
                     <button class="btn btn-primary">Kaydet</button>
                 </div>

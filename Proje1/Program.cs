@@ -17,6 +17,8 @@ builder.Services.AddScoped<IHeadingDal, EfHeadingDal>();
 builder.Services.AddScoped<IHeadinService, HeadinManager>();
 builder.Services.AddScoped<IContentDal, EfContentDal>();
 builder.Services.AddScoped<IContentService, ContentManager>();
+builder.Services.AddScoped<IAbautDal, EfAbautDal>();
+builder.Services.AddScoped<IAbautService, AbautManager>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
