@@ -36,8 +36,8 @@ public class ContentManager : IContentService
         return _contentDal.GetAll();
     }
 
-    public List<Content> GetAllById(int id)
+    public List<Content> GetAllByIdHeading(int id)
     {
-        return _contentDal.GetAll(x => x.HeadingId == id);
+        return _contentDal.GetListByHeadingIdWithWriter(id);
     }
 }
