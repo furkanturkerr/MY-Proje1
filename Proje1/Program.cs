@@ -13,6 +13,8 @@ builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IWriterDal, EfWriterDal>();
 builder.Services.AddScoped<IWriterService, WriterManager>();
+builder.Services.AddScoped<IHeadingDal, EfHeadingDal>();
+builder.Services.AddScoped<IHeadinService, HeadinManager>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -38,6 +40,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Writer}/{action=Index}/{id?}");
+    pattern: "{controller=Heading}/{action=Index}/{id?}");
 
 app.Run();
