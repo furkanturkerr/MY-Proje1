@@ -8381,6 +8381,22 @@
       "PackagePath": "staticwebassets\\AdminLTE-3.0.4\\starter.html"
     },
     {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\colorlib-error-404-10\\css\\style.css",
+      "PackagePath": "staticwebassets\\colorlib-error-404-10\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\colorlib-error-404-10\\img\\bg.jpg",
+      "PackagePath": "staticwebassets\\colorlib-error-404-10\\img\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\colorlib-error-404-10\\index.html",
+      "PackagePath": "staticwebassets\\colorlib-error-404-10\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\colorlib-error-404-10\\readme.txt",
+      "PackagePath": "staticwebassets\\colorlib-error-404-10\\readme.txt"
+    },
+    {
       "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
