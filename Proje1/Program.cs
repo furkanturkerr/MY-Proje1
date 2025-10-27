@@ -3,6 +3,7 @@ using Business.Concrete;
 using DataAcces.Abstract;
 using DataAcces.Concrate.EntityFramework;
 using DataAcces.Concrate.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,11 +27,20 @@ builder.Services.AddScoped<IMessageService, MessageManager>();
 builder.Services.AddScoped<IAdminDal, EfAdminDal>();   
 builder.Services.AddScoped<IAdminService, AdminManager>();
 builder.Services.AddSession();
-// Add services to the container.
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(opt =>
+    {
+        opt.LoginPath = "/Login/Index";
+        opt.AccessDeniedPath = "/ErrorPage/Index";
+        opt.SlidingExpiration = true;
+    });
 
 var app = builder.Build();
+
+
 
 app.UseSession();
 app.UseStatusCodePagesWithReExecute("/ErrorPage/{0}");
@@ -48,10 +58,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=Index}/{id?}");
-
 app.Run();

@@ -15,27 +15,27 @@ public class AdminManager : IAdminService
     }
     public void Insert(Admin t)
     {
-        throw new NotImplementedException();
+        _adminDal.Add(t);
     }
 
     public void Update(Admin t)
     {
-        throw new NotImplementedException();
+        _adminDal.Update(t);
     }
 
     public void Delete(Admin t)
     {
-        throw new NotImplementedException();
+       _adminDal.Delete(t);
     }
 
     public Admin GetById(int id)
     {
-        throw new NotImplementedException();
+        return _adminDal.GetById(id);
     }
 
     public List<Admin> GetAll()
     {
-        throw new NotImplementedException();
+        return _adminDal.GetAll();
     }
 
     public Admin Login(string username, string password)

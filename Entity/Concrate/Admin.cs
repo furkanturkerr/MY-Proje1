@@ -10,9 +10,6 @@ public class Admin
     [StringLength(50)]
     public string AdminName { get; set; }
     
-    [StringLength(50)]
+    [StringLength(250)]
     public string AdminPasword { get; set; }
-    
-    [StringLength(1)]
-    public string AdminRole { get; set; }
 }

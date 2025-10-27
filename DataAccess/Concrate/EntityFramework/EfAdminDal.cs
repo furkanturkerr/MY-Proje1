@@ -7,18 +7,14 @@ namespace DataAcces.Concrate.EntityFramework;
 public class EfAdminDal : GenericRepository<Admin>, IAdminDal
 {
     
+    private readonly ProjeContext _context;
     public EfAdminDal(ProjeContext context) : base(context)
     {
-        
+        _context = context;
     }
-    private IAdminDal _adminDalImplementation;
 
-    public Admin GetByName(string adminName)
+    public Admin? GetByName(string adminName)
     {
-        using (var context = new ProjeContext())
-        {
-            return context.Admins
-                .FirstOrDefault(x => x.AdminName == adminName);
-        }
+        return _context.Admins.FirstOrDefault(x => x.AdminName == adminName);
     }
 }

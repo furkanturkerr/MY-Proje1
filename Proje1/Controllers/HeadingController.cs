@@ -1,11 +1,12 @@
 using System.Net.Mime;
 using Business.Abstract;
 using Entity.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApplication3.Controllers;
-
+[Authorize]
 public class HeadingController : Controller
 {
     private readonly IHeadinService _headinService;
