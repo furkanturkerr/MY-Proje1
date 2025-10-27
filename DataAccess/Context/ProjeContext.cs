@@ -16,4 +16,5 @@ public class ProjeContext : DbContext
     public DbSet<Contact> Contacts { get; set; }
     public DbSet<Writer>  Writers { get; set; }
     public DbSet<Category>  Categories { get; set; }
+    public DbSet<Message>  Messages { get; set; }
 }
