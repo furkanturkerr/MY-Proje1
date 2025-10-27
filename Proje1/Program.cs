@@ -23,14 +23,16 @@ builder.Services.AddScoped<IContactDal, EfContactDal>();
 builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IMessageDal, EfMessageDal>();
 builder.Services.AddScoped<IMessageService, MessageManager>();
-
+builder.Services.AddScoped<IAdminDal, EfAdminDal>();   
+builder.Services.AddScoped<IAdminService, AdminManager>();
+builder.Services.AddSession();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 
 var app = builder.Build();
 
-
+app.UseSession();
 app.UseStatusCodePagesWithReExecute("/ErrorPage/{0}");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

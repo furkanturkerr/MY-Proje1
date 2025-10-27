@@ -2,10 +2,12 @@ using Business.Abstract;
 using Business.ValidationRules;
 using Entity.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
 
+[Authorize]
 public class CategoryController : Controller
 {
     private readonly ICategoryService _categoryService;
