@@ -1,4 +1,5 @@
 using Business.Abstract;
+using Entity.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
@@ -14,6 +15,12 @@ public class ContactController : Controller
     public IActionResult Index()
     {
         var values = _contactService.GetAll();
-        return View();
+        return View(values);
+    }
+    
+    public IActionResult ContactDetails(int id)
+    {
+        var values = _contactService.GetById(id);
+        return View(values);
     }
 }
