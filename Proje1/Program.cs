@@ -19,6 +19,8 @@ builder.Services.AddScoped<IContentDal, EfContentDal>();
 builder.Services.AddScoped<IContentService, ContentManager>();
 builder.Services.AddScoped<IAbautDal, EfAbautDal>();
 builder.Services.AddScoped<IAbautService, AbautManager>();
+builder.Services.AddScoped<IContactDal, EfContactDal>();
+builder.Services.AddScoped<IContactService, ContactManager>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
