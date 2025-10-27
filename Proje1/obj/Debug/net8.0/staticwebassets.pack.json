@@ -9089,6 +9089,258 @@
       "PackagePath": "staticwebassets\\login-form-19\\scss\\style.scss"
     },
     {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\aos-animation.css",
+      "PackagePath": "staticwebassets\\web\\css\\aos-animation.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\aos.css",
+      "PackagePath": "staticwebassets\\web\\css\\aos.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\web\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\fontawesome-all.css",
+      "PackagePath": "staticwebassets\\web\\css\\fontawesome-all.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\roadmap.css",
+      "PackagePath": "staticwebassets\\web\\css\\roadmap.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\simpleLightbox.css",
+      "PackagePath": "staticwebassets\\web\\css\\simpleLightbox.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\snow.css",
+      "PackagePath": "staticwebassets\\web\\css\\snow.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\css\\style.css",
+      "PackagePath": "staticwebassets\\web\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\1.png",
+      "PackagePath": "staticwebassets\\web\\images\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\2.png",
+      "PackagePath": "staticwebassets\\web\\images\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\3.png",
+      "PackagePath": "staticwebassets\\web\\images\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\4.png",
+      "PackagePath": "staticwebassets\\web\\images\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\5.png",
+      "PackagePath": "staticwebassets\\web\\images\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\6.png",
+      "PackagePath": "staticwebassets\\web\\images\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\7.png",
+      "PackagePath": "staticwebassets\\web\\images\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\8.png",
+      "PackagePath": "staticwebassets\\web\\images\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\9.png",
+      "PackagePath": "staticwebassets\\web\\images\\9.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\close.png",
+      "PackagePath": "staticwebassets\\web\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\contact.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\contact.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\exp.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\exp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g1.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g2.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g3.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g4.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g5.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g6.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g7.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g8.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\g9.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\g9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\loader.gif",
+      "PackagePath": "staticwebassets\\web\\images\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\move_up.png",
+      "PackagePath": "staticwebassets\\web\\images\\move_up.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\next.png",
+      "PackagePath": "staticwebassets\\web\\images\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\prev.png",
+      "PackagePath": "staticwebassets\\web\\images\\prev.png"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\serve.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\serve.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\stats.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\stats.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\images\\testimonials.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\testimonials.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\index.html",
+      "PackagePath": "staticwebassets\\web\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\aos.js",
+      "PackagePath": "staticwebassets\\web\\js\\aos.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\web\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\easing.js",
+      "PackagePath": "staticwebassets\\web\\js\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\jquery-2.2.3.min.js",
+      "PackagePath": "staticwebassets\\web\\js\\jquery-2.2.3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\jquery.countup.js",
+      "PackagePath": "staticwebassets\\web\\js\\jquery.countup.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\jquery.roadmap.js",
+      "PackagePath": "staticwebassets\\web\\js\\jquery.roadmap.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\web\\js\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\move-top.js",
+      "PackagePath": "staticwebassets\\web\\js\\move-top.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\js\\simpleLightbox.js",
+      "PackagePath": "staticwebassets\\web\\js\\simpleLightbox.js"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\w3layouts-license.txt",
+      "PackagePath": "staticwebassets\\web\\w3layouts-license.txt"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Furkan\\MY\\My - Proje1\\Proje1\\wwwroot\\web\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\web\\webfonts\\fa-solid-900.woff2"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Proje1.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
