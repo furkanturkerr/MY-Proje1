@@ -30,6 +30,15 @@
       <Content Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v2-4-x.md" />
       <Content Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v3-x.md" />
       <Content Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\feature-request-for-adminlte-v3-x.md" />
+      <Content Include="wwwroot\login-form-19\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\css\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\css\bootstrap\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\css\bootstrap\mixins\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\fonts\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\images\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\js\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\scss\.DS_Store" />
+      <Content Include="wwwroot\login-form-19\scss\bootstrap\.DS_Store" />
     </ItemGroup>
 
     <ItemGroup>

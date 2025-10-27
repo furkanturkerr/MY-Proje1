@@ -17,4 +17,5 @@ public class ProjeContext : DbContext
     public DbSet<Writer>  Writers { get; set; }
     public DbSet<Category>  Categories { get; set; }
     public DbSet<Message>  Messages { get; set; }
+    public DbSet<Admin>  Admins { get; set; }
 }
