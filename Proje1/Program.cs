@@ -4,7 +4,6 @@ using DataAcces.Abstract;
 using DataAcces.Concrate.EntityFramework;
 using DataAcces.Concrate.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,41 +31,38 @@ builder.Services.AddScoped<IImageDal, EfImageDal>();
 builder.Services.AddScoped<IImageService, ImageManager>();
 
 builder.Services.AddDistributedMemoryCache();
+
 builder.Services.AddSession(opt =>
 {
     opt.Cookie.HttpOnly = true;
     opt.Cookie.IsEssential = true;
+    opt.IdleTimeout = TimeSpan.FromHours(4);
 });
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 
-// Cookie Authentication
 builder.Services
     .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(opt =>
     {
-        opt.LoginPath = "/Login/Index";   
-        opt.AccessDeniedPath = "/Login/Denied"; 
+        opt.LoginPath = "/Login/Index";
+        opt.AccessDeniedPath = "/Login/Denied";
         opt.SlidingExpiration = true;
         opt.ExpireTimeSpan = TimeSpan.FromHours(12);
     });
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddSession(opt =>
-{
-    opt.IdleTimeout = TimeSpan.FromHours(4);
-});
-
-
 var app = builder.Build();
 
-app.UseStatusCodePagesWithReExecute("/ErrorPage/{0}");
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseExceptionHandler("/Error/Error500");
+}
+else
+{
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
@@ -74,10 +70,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseStatusCodePagesWithReExecute("/Error/Error404");
+
+app.UseSession();         
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

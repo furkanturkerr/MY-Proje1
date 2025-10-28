@@ -53,4 +53,8 @@
       <Folder Include="Pages\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\ErrorPage\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
