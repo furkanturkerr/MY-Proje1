@@ -1,57 +1,98 @@
 using System.Security.Claims;
+using Business.Abstract;
+using Entity.Concrete;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using Business.Abstract;
-using Entity.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
+
 [AllowAnonymous]
 public class LoginController : Controller
 {
     private readonly IAdminService _adminService;
-    public LoginController(IAdminService adminService) => _adminService = adminService;
 
-    [HttpGet, AllowAnonymous]
-    public IActionResult Index(string? returnUrl = null)
+    public LoginController(IAdminService adminService)
     {
-        ViewBag.ReturnUrl = returnUrl;
-        return View();
+        _adminService = adminService;
     }
 
-    [HttpPost, AllowAnonymous]
-    public async Task<IActionResult> Index(Admin p, string? returnUrl = null)
+    [HttpGet]
+    public IActionResult Index() => View();
+
+    [HttpPost]
+    public async Task<IActionResult> Index(Admin model)
     {
-        var admin = _adminService.Login(p.AdminName, p.AdminPasword);
+        if (string.IsNullOrWhiteSpace(model.AdminName) || string.IsNullOrWhiteSpace(model.AdminPasword))
+        {
+            ViewBag.Error = "Kullanıcı adı ve şifre boş olamaz.";
+            return View();
+        }
+
+        var admin = _adminService.Login(model.AdminName, model.AdminPasword);
         if (admin == null)
         {
             ViewBag.Error = "Kullanıcı adı veya şifre hatalı.";
             return View();
         }
 
-        var claims = new List<Claim>
+        await SignInAsync(admin);
+        return RedirectToAction("Index", "Category");
+    }
+
+    [HttpGet]
+    public IActionResult Register() => View();
+
+    [HttpPost]
+    public async Task<IActionResult> Register(Admin model)
+    {
+        if (string.IsNullOrWhiteSpace(model.AdminName) ||
+            string.IsNullOrWhiteSpace(model.AdminPasword) ||
+            string.IsNullOrWhiteSpace(model.AdminRole))
         {
-            new Claim(ClaimTypes.Name, admin.AdminName),
-        };
-        var identity  = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-        var principal = new ClaimsPrincipal(identity);
+            ViewBag.Error = "Lütfen tüm alanları doldurun.";
+            return View();
+        }
 
-        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+        var createdAdmin = _adminService.Register(model.AdminName, model.AdminPasword, model.AdminRole);
 
-        HttpContext.Session.SetString("AdminName", admin.AdminName);
+        if (createdAdmin == null)
+        {
+            ViewBag.Error = "Bu kullanıcı adı zaten mevcut.";
+            return View();
+        }
 
-        if (!string.IsNullOrWhiteSpace(returnUrl) && Url.IsLocalUrl(returnUrl))
-            return LocalRedirect(returnUrl);
+        await SignInAsync(createdAdmin);
 
-        return RedirectToAction("Index", "Category"); 
+        ViewBag.Success = "Kayıt başarılı! Oturum açılıyor...";
+        return RedirectToAction("Index", "Category");
     }
 
     [Authorize]
     public async Task<IActionResult> Logout()
     {
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        HttpContext.Session.Clear();
         return RedirectToAction("Index", "Login");
+    }
+
+    public IActionResult Denied()
+    {
+        return View();
+    }
+
+    private async Task SignInAsync(Admin admin)
+    {
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, admin.AdminId.ToString()),
+            new Claim(ClaimTypes.Name, admin.AdminName),
+            new Claim(ClaimTypes.Role, admin.AdminRole)
+        };
+
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+
+        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
     }
 }

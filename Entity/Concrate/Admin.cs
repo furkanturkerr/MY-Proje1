@@ -12,4 +12,7 @@ public class Admin
     
     [StringLength(250)]
     public string AdminPasword { get; set; }
+    
+    [StringLength(50)]
+    public string AdminRole { get; set; }
 }

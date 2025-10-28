@@ -46,10 +46,19 @@ builder.Services
     .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(opt =>
     {
-        opt.LoginPath = "/Login/Index";          
-        opt.AccessDeniedPath = "/ErrorPage/Index";
+        opt.LoginPath = "/Login/Index";   
+        opt.AccessDeniedPath = "/Login/Denied"; 
         opt.SlidingExpiration = true;
+        opt.ExpireTimeSpan = TimeSpan.FromHours(12);
     });
+
+builder.Services.AddAuthorization();
+
+builder.Services.AddSession(opt =>
+{
+    opt.IdleTimeout = TimeSpan.FromHours(4);
+});
+
 
 var app = builder.Build();
 

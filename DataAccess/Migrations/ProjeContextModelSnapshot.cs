@@ -73,6 +73,11 @@ namespace DataAcces.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<string>("AdminRole")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.HasKey("AdminId");
 
                     b.ToTable("Admins");
