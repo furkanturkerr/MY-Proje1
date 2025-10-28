@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
-[Authorize]
+[Authorize(Roles = "Admin")]
 public class GaleryController : Controller
 {
     private readonly IImageService _imageService;
