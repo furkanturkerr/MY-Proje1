@@ -64,7 +64,21 @@ public class CategoryController : Controller
     [HttpPost]
     public IActionResult UpdateCategory(Category category)
     {
+        
+        CategoryValidatior categoryValidatior = new();
+        ValidationResult validationResult = categoryValidatior.Validate(category);
+        if (validationResult.IsValid)
+        {
             _categoryService.Update(category);
             return RedirectToAction("Index");
+        }
+        else
+        {
+            foreach (var item in validationResult.Errors )
+            {
+                ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            }
+        }
+        return View();
     }
 }

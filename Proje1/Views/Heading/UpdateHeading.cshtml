@@ -12,14 +12,18 @@
         @Html.HiddenFor(x => x.HeadingId)
         @Html.Label("Baslık Id")
         @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.HeadingName)
         <br/>
         @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CategoryId)
         <br/>
         @Html.Label("Tarih")
         @Html.TextBoxFor(x => x.HeadingDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.HeadingDate)
         <br/>
         @Html.Label("Yazar")
         @Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterId)
         <br/>
         <button class="btn btn-success">Güncelle</button>
     </div>

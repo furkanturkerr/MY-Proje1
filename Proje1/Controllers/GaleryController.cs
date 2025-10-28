@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
-[Authorize(Roles = "Admin")]
+
 public class GaleryController : Controller
 {
     private readonly IImageService _imageService;
@@ -11,6 +11,7 @@ public class GaleryController : Controller
     {
         _imageService = imageService;
     }
+    [Authorize(Roles = "admin")]
     public IActionResult Index()
     {
         var values = _imageService.GetAll();

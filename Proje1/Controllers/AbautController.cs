@@ -1,5 +1,7 @@
 using Business.Abstract;
+using Business.ValidationRules;
 using Entity.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,8 +30,21 @@ public class AbautController : Controller
     [HttpPost]
     public IActionResult AddAbaut(Abaut abaut)
     {
-        _abautService.Insert(abaut);
-        return RedirectToAction("Index");
+        AbautValidator abautValidator = new();
+        ValidationResult validationResult = abautValidator.Validate(abaut);
+        if (validationResult.IsValid)
+        {
+            _abautService.Insert(abaut);
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            foreach (var item in validationResult.Errors )
+            {
+                ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            }
+        }
+        return View();
     }
 
     public PartialViewResult _AbautPartial()

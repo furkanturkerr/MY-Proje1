@@ -15,6 +15,7 @@
         <br/>
         @Html.Label("Kategori")
         @Html.DropDownListFor(x=>x.CategoryId, (List<SelectListItem>)ViewBag.vlc , new {@class = "form-control"})
+        @Html.ValidationMessageFor(x => x.CategoryId)
         <br/>
         @Html.Label("Yazar")
         @Html.DropDownListFor(x => x.WriterId, (List<SelectListItem>)ViewBag.vlw , new {@class = "form-control"})

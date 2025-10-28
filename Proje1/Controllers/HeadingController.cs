@@ -1,6 +1,8 @@
 using System.Net.Mime;
 using Business.Abstract;
+using Business.ValidationRules;
 using Entity.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -49,9 +51,24 @@ public class HeadingController : Controller
     [HttpPost]
     public IActionResult AddHeading(Heading heading)
     {
-        heading.HeadingDate = DateTime.Now;
-        _headinService.Insert(heading);
-        return RedirectToAction("Index");
+        HeadingValidator validator = new HeadingValidator();
+        var validationResult = validator.Validate(new Heading());
+        if (validationResult.IsValid == false)
+        {
+            heading.HeadingDate = DateTime.Now;
+            _headinService.Insert(heading);
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            foreach (var item in validationResult.Errors )
+            {
+                ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            }
+        }
+
+        return View();
+
     }
     
     [HttpGet]
@@ -71,8 +88,23 @@ public class HeadingController : Controller
     [HttpPost]
     public IActionResult UpdateHeading(Heading heading)
     {
-        _headinService.Update(heading);
-        return RedirectToAction("Index");
+        
+        HeadingValidator headingValidator = new();
+        ValidationResult validationResult = headingValidator.Validate(heading);
+        if (validationResult.IsValid == false)
+        {
+            
+            _headinService.Update(heading);
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            foreach (var item in validationResult.Errors )
+            {
+                ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            }
+        }
+        return View();
     }
 
     public IActionResult DeleteHeading(int id)
