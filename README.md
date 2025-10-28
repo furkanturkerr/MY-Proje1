@@ -5,6 +5,8 @@ Erişim - ASP.NET Core Role-Based Authorization
 <img width="1919" height="905" alt="image" src="https://github.com/user-attachments/assets/78c132bf-7a51-4f45-b58d-8217ba30aa6e" />
 <br></br>
 <br></br>
+<img width="1906" height="990" alt="image" src="https://github.com/user-attachments/assets/1457e944-da57-4901-ba05-ced1bd91400e" />
+<br></br>
 <img width="1919" height="913" alt="image" src="https://github.com/user-attachments/assets/bd3ee906-401e-4f1c-8a9f-50117e344d26" />
 <br></br>
 <img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/fd318a1d-232c-465c-a093-2843ed4e5d59" />
