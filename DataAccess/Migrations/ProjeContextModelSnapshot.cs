@@ -204,6 +204,29 @@ namespace DataAcces.Migrations
                     b.ToTable("Headings");
                 });
 
+            modelBuilder.Entity("Entity.Concrete.Image", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"));
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("ImageId");
+
+                    b.ToTable("Images");
+                });
+
             modelBuilder.Entity("Entity.Concrete.Message", b =>
                 {
                     b.Property<int>("MessageId")

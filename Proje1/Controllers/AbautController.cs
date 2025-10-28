@@ -1,9 +1,10 @@
 using Business.Abstract;
 using Entity.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
-
+[Authorize]
 public class AbautController : Controller
 {
     private readonly IAbautService _abautService;

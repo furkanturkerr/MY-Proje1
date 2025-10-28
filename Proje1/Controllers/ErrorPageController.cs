@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers
 {
+    [Route("ErrorPage")]
     public class ErrorPageController : Controller
     {
         [Route("ErrorPage/{code}")]

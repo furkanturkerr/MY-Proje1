@@ -1,9 +1,10 @@
 using Business.Abstract;
 using Entity.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
-
+[Authorize]
 public class ContactController : Controller
 {
     private readonly IContactService _contactService;

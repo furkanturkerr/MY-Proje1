@@ -1,8 +1,9 @@
 using Business.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
-
+[Authorize]
 public class MessageController : Controller
 {
     private readonly IMessageService _messageService;

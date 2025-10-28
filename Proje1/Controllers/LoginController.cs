@@ -7,7 +7,7 @@ using Entity.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication3.Controllers;
-
+[AllowAnonymous]
 public class LoginController : Controller
 {
     private readonly IAdminService _adminService;
@@ -30,7 +30,6 @@ public class LoginController : Controller
             return View();
         }
 
-        // Claims + Cookie oluştur
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, admin.AdminName),
@@ -40,14 +39,12 @@ public class LoginController : Controller
 
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-        // (İstersen) Session devam etsin
         HttpContext.Session.SetString("AdminName", admin.AdminName);
 
-        // Güvenli geri dönüş
         if (!string.IsNullOrWhiteSpace(returnUrl) && Url.IsLocalUrl(returnUrl))
             return LocalRedirect(returnUrl);
 
-        return RedirectToAction("Index", "Category"); // varsayılan yönlendirme
+        return RedirectToAction("Index", "Category"); 
     }
 
     [Authorize]
